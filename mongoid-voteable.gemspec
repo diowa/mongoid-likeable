@@ -15,6 +15,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "mongoid", "~> 3.0.5"
 
+  s.add_development_dependency "database_cleaner", "~> 0.8.0"
+
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
