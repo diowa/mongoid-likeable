@@ -12,9 +12,8 @@ module Mongoid
 
     def vote(amount, voter_id)
       unless voted?(voter_id)
-        self.votes += amount.to_i
-        self.voters << voter_id
-        self.save
+        self.inc :votes, amount.to_i
+        self.push :voters, voter_id
       end
     end
 
