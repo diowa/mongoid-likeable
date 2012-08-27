@@ -42,6 +42,16 @@ class TestMongoidVoteable < MiniTest::Unit::TestCase
     assert_equal 2, @story.votes
   end
 
+  def test_can_vote_by_user_id
+    @story.vote 1, @simon._id
+    assert_equal 1, @story.votes
+  end
+
+  def test_can_vote_by_user
+    @story.vote 1, @simon
+    assert_equal 1, @story.votes
+  end
+
   def test_limits_one_vote_per_voter
     @story.vote 1, @simon._id
     @story.vote 3, @simon._id

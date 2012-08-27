@@ -10,19 +10,31 @@ module Mongoid
       field :voters, :type => Array, :default => []
     end
 
-    def vote(amount, voter_id)
-      unless voted?(voter_id)
+    def vote(amount, voter)
+      id = voter_id(voter)
+      unless voted?(id)
         self.inc :votes, amount.to_i
-        self.push :voters, voter_id
+        self.push :voters, id
       end
     end
 
-    def voted?(voter_id)
-      voters.include?(voter_id)
+    def voted?(voter)
+      id = voter_id(voter)
+      voters.include?(id)
     end
 
     def vote_count
       voters.count
+    end
+
+    private
+
+    def voter_id(voter)
+      if voter.respond_to?(:_id)
+        voter._id
+      else
+        voter
+      end
     end
   end
 

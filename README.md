@@ -50,6 +50,15 @@ You also have access to a couple of helpful methods.
 @story.vote_count   # total number of votes
 ```
 
+**Note** if your users are not stored in a Mongo collection or the ID field is
+not called `_id` you can still pass the ID in as the second parameter instead.
+
+```ruby
+@story.vote 1, @user.id
+
+@story.voted? @user.id
+```
+
 Currently it will only use the first vote from a user. Functionality to allow a
 user to change their vote may be included in a future release.
 
