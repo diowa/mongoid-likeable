@@ -10,7 +10,7 @@ Install the gem
 
 or add the gem to your `Gemfile`
 
-    gem 'mongoid-likeable', '~> 0.1.0'
+    gem 'mongoid-likeable'
 
 ## Usage
 
@@ -40,7 +40,7 @@ You also have access to a couple of helpful methods.
 ```ruby
 @story.liked? @user # true if the user has already liked this
 
-@story.likes_count   # total number of likes
+@story.like_count   # total number of likes
 ```
 
 **Note** if your users are not stored in a Mongo collection or the ID field is
