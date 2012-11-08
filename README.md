@@ -31,7 +31,7 @@ You can then like by simply using the `like` method on the model.
 @story = Story.first
 @user = User.where(name: 'Simon')
 
-@story.like @user  # you like it
+@story.like @user   # you like it
 @story.unlike @user # you don't like it anymore
 ```
 
