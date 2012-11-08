@@ -2,16 +2,16 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "mongoid-voteable"
-  s.version     = "0.1.1"
+  s.name        = "mongoid-likeable"
+  s.version     = "1.0"
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Tom Bell"]
-  s.email       = ["tomb@tomb.io"]
-  s.homepage    = "https://github.com/tombell/mongoid-voteable"
-  s.summary     = "Add voting to your Mongoid documents"
+  s.authors     = ["Diowa"]
+  s.email       = ["dev@diowa.com"]
+  s.homepage    = "https://github.com/diowa/mongoid-likeable"
+  s.summary     = "Add likes to your Mongoid documents"
   s.description = s.summary
 
-  s.rubyforge_project = "mongoid-voteable"
+  s.rubyforge_project = "mongoid-likeable"
 
   s.add_dependency "mongoid", "~> 3.0.5"
 

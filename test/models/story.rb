@@ -1,6 +1,6 @@
 class Story
   include Mongoid::Document
-  include Mongoid::Voteable
+  include Mongoid::Likeable
 
   field :name
 end
