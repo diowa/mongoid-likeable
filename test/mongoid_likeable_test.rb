@@ -13,6 +13,10 @@ class TestMongoidLikeable < MiniTest::Unit::TestCase
     DatabaseCleaner.clean
   end
 
+  def test_add_likes_field_to_document
+    refute_nil Story.fields['likes']
+  end
+
   def test_add_likers_field_to_document
     refute_nil Story.fields['likers']
   end
@@ -32,38 +36,33 @@ class TestMongoidLikeable < MiniTest::Unit::TestCase
     refute_nil story.respond_to?('liked?')
   end
 
-  def test_defines_like_count_method
-    story = Story.new
-    refute_nil story.respond_to?('like_count')
-  end
-
   def test_tracks_number_of_likers
     @story.like @simon
     @story.like @emily
-    assert_equal 2, @story.like_count
+    assert_equal 2, @story.likes
   end
 
   def test_can_like_by_user_id
     @story.like @simon._id
-    assert_equal 1, @story.like_count
+    assert_equal 1, @story.likes
   end
 
   def test_can_like_by_user
     @story.like @simon
-    assert_equal 1, @story.like_count
+    assert_equal 1, @story.likes
   end
 
   def test_can_unlike_by_user
     @story.like @simon
-    assert_equal 1, @story.like_count
+    assert_equal 1, @story.likes
     @story.unlike @simon
-    assert_equal 0, @story.like_count
+    assert_equal 0, @story.likes
   end
 
   def test_limits_one_like_per_liker
     @story.like @simon
     @story.like @simon
-    assert_equal 1, @story.like_count
+    assert_equal 1, @story.likes
   end
 
   def test_knows_who_has_liked
@@ -76,12 +75,12 @@ class TestMongoidLikeable < MiniTest::Unit::TestCase
     @story.like @simon
     @story.like @emily
     story = Story.where(:name => 'Mongoid Rocks').first
-    assert_equal 2, story.like_count
+    assert_equal 2, story.likes
     assert story.liked? @simon
     assert story.liked? @emily
     story.unlike @simon
     story = Story.where(:name => 'Mongoid Rocks').first
-    assert_equal 1, story.like_count
+    assert_equal 1, story.likes
     refute story.liked? @simon
     assert story.liked? @emily
   end

@@ -1,8 +1,11 @@
 # mongoid-likeable
 
-Add like to your Mongoid documents
+Add like to your Mongoid documents.
+This is a fork of `tombell/mongoid-voteable` for people who only need likes.
 
-## Installation
+**Note** Breaking changes from version 1.0 to 2.0. Check out our wiki for an update script
+
+## Installation
 
 Install the gem
 
@@ -35,13 +38,12 @@ You can then like by simply using the `like` method on the model.
 @story.unlike @user # you don't like it anymore
 ```
 
-You also have access to a couple of helpful methods.
+You also have access to a helpful method.
 
 ```ruby
 @story.liked? @user # true if the user has already liked this
-
-@story.like_count   # total number of likes
 ```
+Likes are stored in a field called `likes`, so you can sort models by like count.
 
 **Note** if your users are not stored in a Mongo collection or the ID field is
 not called `_id` you can still pass the ID in as the second parameter instead.
