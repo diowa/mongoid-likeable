@@ -57,4 +57,5 @@ not called `_id` you can still pass the ID in as the second parameter instead.
 ## License
 
 mongoid-likeable is licensed under the BSD 2-Clause License
+
 mongoid-voteable is licensed under the MIT License - Copyright (c) 2012 Tom Bell
