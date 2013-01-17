@@ -15,6 +15,7 @@ module Mongoid
       unless liked?(id)
         self.inc :likes, 1
         self.push :likers, id
+        touch_updated_at
       end
     end
 
@@ -23,6 +24,7 @@ module Mongoid
       if liked?(id)
         self.inc :likes, -1
         self.pull :likers, id
+        touch_updated_at
       end
     end
 
@@ -40,6 +42,9 @@ module Mongoid
         liker
       end
     end
-  end
 
+    def touch_updated_at
+      self.touch if self.is_a?(Mongoid::Timestamps::Updated)
+    end
+  end
 end
