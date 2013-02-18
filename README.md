@@ -1,4 +1,4 @@
-# mongoid-likeable [![Build Status](https://secure.travis-ci.org/diowa/mongoid-likeable.png?branch=master)](https://travis-ci.org/diowa/mongoid-likeable) [![Dependency Status](https://gemnasium.com/diowa/mongoid-likeable.png)](https://gemnasium.com/diowa/mongoid-likeable) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/diowa/mongoid-likeable)
+# mongoid-likeable [![Build Status](https://secure.travis-ci.org/diowa/mongoid-likeable.png?branch=master)](https://travis-ci.org/diowa/mongoid-likeable) [![Dependency Status](https://gemnasium.com/diowa/mongoid-likeable.png)](https://gemnasium.com/diowa/mongoid-likeable) [![Code Climate](https://codeclimate.com/github/diowa/mongoid-likeable.png)](https://codeclimate.com/github/diowa/mongoid-likeable)
 
 Add like to your Mongoid documents.
 This is a fork of `tombell/mongoid-voteable` for people who only need likes.
@@ -57,4 +57,5 @@ not called `_id` you can still pass the ID in as the second parameter instead.
 ## License
 
 mongoid-likeable is licensed under the BSD 2-Clause License
+
 mongoid-voteable is licensed under the MIT License - Copyright (c) 2012 Tom Bell
