@@ -13,12 +13,13 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = 'mongoid-likeable'
 
-  s.add_dependency 'mongoid', '~> 3.1.0'
+  s.add_dependency 'mongoid', '~> 3.1.2'
 
-  s.add_development_dependency 'database_cleaner', '~> 0.9.1'
-  s.add_development_dependency 'rake', '~> 10.0.3'
+  s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'rake'
   s.add_development_dependency 'debugger'
   s.add_development_dependency 'delorean'
+  s.add_development_dependency 'coveralls'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
