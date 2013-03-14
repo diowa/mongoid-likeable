@@ -1,3 +1,7 @@
+3.0.2
+-----
+* Cleaning up code
+
 3.0.1
 -----
 * Updated dependencies
