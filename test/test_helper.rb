@@ -1,5 +1,8 @@
 $:.unshift(File.expand_path("../../lib", __FILE__))
 
+require 'coveralls'
+Coveralls.wear!
+
 require 'minitest/autorun'
 require 'database_cleaner'
 

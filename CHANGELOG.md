@@ -1,3 +1,8 @@
+3.0.1
+-----
+* Updated dependencies
+* Added Coveralls
+
 3.0
 ---
 * Touches model when liking
