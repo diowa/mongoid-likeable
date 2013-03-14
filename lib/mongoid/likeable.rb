@@ -13,18 +13,18 @@ module Mongoid
     def like(liker)
       id = liker_id(liker)
       unless liked?(id)
-        self.inc :likes, 1
-        self.push :likers, id
-        self.touch
+        inc :likes, 1
+        push :likers, id
+        touch
       end
     end
 
     def unlike(liker)
       id = liker_id(liker)
       if liked?(id)
-        self.inc :likes, -1
-        self.pull :likers, id
-        self.touch
+        inc :likes, -1
+        pull :likers, id
+        touch
       end
     end
 
