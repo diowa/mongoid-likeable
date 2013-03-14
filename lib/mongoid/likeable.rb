@@ -15,6 +15,7 @@ module Mongoid
       unless liked?(id)
         self.inc :likes, 1
         self.push :likers, id
+        self.touch
       end
     end
 
@@ -23,6 +24,7 @@ module Mongoid
       if liked?(id)
         self.inc :likes, -1
         self.pull :likers, id
+        self.touch
       end
     end
 
@@ -41,5 +43,4 @@ module Mongoid
       end
     end
   end
-
 end
