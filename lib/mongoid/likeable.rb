@@ -6,13 +6,16 @@ module Mongoid
     extend ActiveSupport::Concern
 
     included do
+      LIKEABLE_MUTEX = Mutex.new
+
       field :likes, type: Integer, default: 0
       field :likers, type: Array, default: []
     end
 
     def like(liker)
       id = liker_id(liker)
-      unless liked?(id)
+      return if liked? id
+      LIKEABLE_MUTEX.synchronize do
         inc :likes, 1
         push :likers, id
         touch
@@ -21,7 +24,8 @@ module Mongoid
 
     def unlike(liker)
       id = liker_id(liker)
-      if liked?(id)
+      return unless liked? id
+      LIKEABLE_MUTEX.synchronize do
         inc :likes, -1
         pull :likers, id
         touch

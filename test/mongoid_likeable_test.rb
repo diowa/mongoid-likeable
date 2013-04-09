@@ -69,6 +69,15 @@ class TestMongoidLikeable < MiniTest::Unit::TestCase
     assert_equal 1, @story.likes
   end
 
+  def test_successful_like_return_value
+    assert_equal true, @story.like(@simon)
+  end
+
+  def test_failed_like_return_value
+    @story.like @simon
+    assert_equal nil, @story.like(@simon)
+  end
+
   def test_knows_who_has_liked
     @story.like @simon
     assert @story.liked? @simon

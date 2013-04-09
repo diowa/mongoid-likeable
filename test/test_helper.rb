@@ -1,7 +1,9 @@
 $:.unshift(File.expand_path("../../lib", __FILE__))
 
-require 'coveralls'
-Coveralls.wear!
+if ENV['CI']
+  require 'coveralls'
+  Coveralls.wear!
+end
 
 require 'minitest/autorun'
 require 'database_cleaner'
