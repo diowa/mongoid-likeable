@@ -1,3 +1,5 @@
+* Thread safety
+
 3.0.2
 -----
 * Cleaning up code
