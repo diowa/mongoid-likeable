@@ -1,3 +1,8 @@
+4.1
+---
+* Improved code
+* Thread safety without mutex
+
 4.0
 ---
 * Thread safety

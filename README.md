@@ -21,7 +21,7 @@ or add the gem to your `Gemfile`
 
 ## Thread safety
 
-This gem is thread safe. It uses a mutex on the likeable object.
+This gem is thread safe.
 
 ## Usage
 
