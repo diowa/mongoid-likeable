@@ -39,19 +39,16 @@ end
 You can then like by simply using the `like` method on the model.
 
 ```ruby
-@story = Story.first
-@user = User.where(name: 'Simon')
-
-@story.like @user   # you like it
-@story.unlike @user # you don't like it anymore
+@story.like @user   # @user likes @story
+@story.unlike @user # @user doesn't like @story anymore
 ```
 
 You also have access to a helpful method.
 
 ```ruby
-@story.liked? @user # true if the user has already liked this
+@story.liked? @user # true if @user likes @story
 ```
-Likes are stored in a field called `likes`, so you can sort models by like count.
+Like count is stored in a field called `likes`, so you can sort models by that field.
 
 **Note** if your users are not stored in a Mongo collection or the ID field is
 not called `_id` you can still pass the ID in as the second parameter instead.
