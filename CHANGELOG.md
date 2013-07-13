@@ -1,3 +1,9 @@
+4.2.0
+-----
+* Semantic versioning
+* Updated README
+* Updated LICENSE
+
 4.1
 ---
 * Improved code
