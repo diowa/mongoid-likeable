@@ -1,3 +1,7 @@
+4.2.1
+-----
+* Added license to gemspec (Fixes #1)
+
 4.2.0
 -----
 * Semantic versioning
