@@ -1,3 +1,7 @@
+4.2.2
+-----
+* Fixed gemspec
+
 4.2.1
 -----
 * Added license to gemspec (Fixes #1)
