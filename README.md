@@ -1,5 +1,6 @@
 # mongoid-likeable
 [![Build Status](https://secure.travis-ci.org/diowa/mongoid-likeable.png?branch=master)](https://travis-ci.org/diowa/mongoid-likeable)
+[![Gem Version](https://badge.fury.io/rb/mongoid-likeable.png)](http://badge.fury.io/rb/mongoid-likeable)
 [![Dependency Status](https://gemnasium.com/diowa/mongoid-likeable.png)](https://gemnasium.com/diowa/mongoid-likeable)
 [![Code Climate](https://codeclimate.com/github/diowa/mongoid-likeable.png)](https://codeclimate.com/github/diowa/mongoid-likeable)
 [![Coverage Status](https://coveralls.io/repos/diowa/mongoid-likeable/badge.png?branch=master)](https://coveralls.io/r/diowa/mongoid-likeable)

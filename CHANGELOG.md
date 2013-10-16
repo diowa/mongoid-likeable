@@ -1,3 +1,8 @@
+4.2.3
+-----
+* Added gem badge
+* Updated dependencies
+
 4.2.2
 -----
 * Fixed gemspec
