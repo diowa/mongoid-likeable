@@ -1,3 +1,10 @@
+5.0.0
+----
+* Updated README
+* Updated LICENSE
+* Added CONTRIBUTING guidelines
+* Added .editorconfig
+
 4.2.3
 -----
 * Added gem badge
