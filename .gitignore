@@ -29,6 +29,7 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+.rvmrc
 
 # YARD artifacts
 .yardoc
@@ -36,3 +37,4 @@ _yardoc
 doc/
 
 Gemfile.lock
+gemfiles/*.lock

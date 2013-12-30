@@ -1,3 +1,11 @@
+5.0.0.alpha1
+------------
+* Mongoid 4 support
+* Updated README
+* Updated LICENSE
+* Added CONTRIBUTING guidelines
+* Added .editorconfig
+
 4.2.3
 -----
 * Added gem badge
