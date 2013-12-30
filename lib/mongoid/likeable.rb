@@ -13,14 +13,14 @@ module Mongoid
     def like(liker)
       id = liker_id(liker)
       return if liked? id
-      push :likers, id
+      push_liker(id)
       update_likers
     end
 
     def unlike(liker)
       id = liker_id(liker)
       return unless liked? id
-      pull :likers, id
+      pull_liker(id)
       update_likers
     end
 
@@ -30,6 +30,22 @@ module Mongoid
     end
 
     private
+    def push_liker(id)
+      if Mongoid::VERSION.start_with?("3.")
+        push :likers, id
+      else
+        push likers: id
+      end
+    end
+
+    def pull_liker(id)
+      if Mongoid::VERSION.start_with?("3.")
+        pull :likers, id
+      else
+        pull likers: id
+      end
+    end
+
     def liker_id(liker)
       if liker.respond_to?(:_id)
         liker._id
