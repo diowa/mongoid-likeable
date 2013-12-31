@@ -1,3 +1,7 @@
+5.0.0.alpha2
+------------
+* Ruby 2.1 support
+
 5.0.0.alpha1
 ------------
 * Mongoid 4 support
