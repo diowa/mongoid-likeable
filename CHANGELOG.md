@@ -1,3 +1,10 @@
+Changelog
+=========
+
+5.0.0.alpha3
+------------
+* Fixed license SPDX ID in gemspec
+
 5.0.0.alpha2
 ------------
 * Ruby 2.1 support
