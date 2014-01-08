@@ -3,13 +3,13 @@ $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'mongoid-likeable'
-  s.version     = '5.0.0.alpha2'
+  s.version     = '5.0.0.alpha3'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['diowa']
   s.email       = ['dev@diowa.com']
   s.homepage    = 'https://github.com/diowa/mongoid-likeable'
   s.summary     = 'Add likes to your Mongoid documents'
-  s.license     = 'BSD 2-Clause'
+  s.license     = 'BSD-2-Clause'
   s.description = s.summary
 
   s.rubyforge_project = 'mongoid-likeable'
