@@ -1,65 +1,68 @@
-Changelog
-=========
+# Changelog
 
-5.0.0.alpha3
-------------
+## 5.0.0.alpha4
+
+* Reformatted changelog
+
+## 5.0.0.alpha3
+
 * Fixed license SPDX ID in gemspec
 
-5.0.0.alpha2
-------------
+## 5.0.0.alpha2
+
 * Ruby 2.1 support
 
-5.0.0.alpha1
-------------
+## 5.0.0.alpha1
+
 * Mongoid 4 support
 * Updated README
 * Updated LICENSE
 * Added CONTRIBUTING guidelines
 * Added .editorconfig
 
-4.2.3
------
+## 4.2.3
+
 * Added gem badge
 * Updated dependencies
 
-4.2.2
------
+## 4.2.2
+
 * Fixed gemspec
 
-4.2.1
------
+## 4.2.1
+
 * Added license to gemspec (Fixes #1)
 
-4.2.0
------
+## 4.2.0
+
 * Semantic versioning
 * Updated README
 * Updated LICENSE
 
-4.1
----
+## 4.1
+
 * Improved code
 * Thread safety without mutex
 
-4.0
----
+## 4.0
+
 * Thread safety
 
-3.0.2
------
+## 3.0.2
+
 * Cleaning up code
 
-3.0.1
------
+## 3.0.1
+
 * Updated dependencies
 * Added Coveralls
 
-3.0
----
+## 3.0
+
 * Touches model when liking
 * Updated dependencies
 * Improved Code Climate Badge
 
-2.1
----
+## 2.1
+
 * Touches updated_at attribute when available
