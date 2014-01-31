@@ -78,7 +78,7 @@ Editor preferences are available in the [editor config](.editorconfig) for easy 
 
 ## Versioning
 
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Twbs Less Rails will be maintained under the Semantic Versioning guidelines as much as possible. Twbs Less Rails will not follow Bootstrap's version number.
+For transparency and insight into our release cycle, and for striving to maintain backward compatibility, mongoid-likeable will be maintained under the Semantic Versioning guidelines as much as possible. mongoid-likeable will not follow mongoid's version number.
 
 Releases will be numbered with the following format:
 
