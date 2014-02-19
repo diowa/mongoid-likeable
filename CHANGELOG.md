@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.0.beta1
+
+* Mongoid 4.0.0.beta1 support
+
 ## 5.0.0.alpha4
 
 * Reformatted changelog
