@@ -4,6 +4,11 @@
 
 * Mongoid 4.0.0.beta1 support
 
+## 5.0.0.alpha5
+
+* Support for mongoid 4.0.0.alpha2
+* Fixed readme
+
 ## 5.0.0.alpha4
 
 * Reformatted changelog
