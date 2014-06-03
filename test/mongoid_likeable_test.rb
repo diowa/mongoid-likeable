@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'debugger'
 require 'delorean'
 
 class TestMongoidLikeable < MiniTest::Unit::TestCase

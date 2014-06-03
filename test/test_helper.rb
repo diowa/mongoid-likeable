@@ -11,11 +11,6 @@ require 'database_cleaner'
 require 'mongoid'
 require 'mongoid/likeable'
 
-require 'debugger'
-if defined?(Debugger)
-  ::Debugger.settings[:autoeval] = true if ::Debugger.respond_to?(:settings)
-end
-
 Dir["#{File.dirname(__FILE__)}/models/*.rb"].each { |f| require f }
 
 Mongoid.connect_to('mongoid-likeable-test')
