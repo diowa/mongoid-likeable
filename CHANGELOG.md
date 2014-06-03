@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.0.0.rc1
+
+* Mongoid 4.0.0.rc1 support
+* Removed debugger
+
 ## 5.0.0.beta1
 
 * Mongoid 4.0.0.beta1 support
