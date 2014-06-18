@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.0.rc2
+
+* Mongoid 4.0.0.rc2 support
+
 ## 5.0.0.rc1
 
 * Mongoid 4.0.0.rc1 support
