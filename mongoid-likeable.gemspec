@@ -3,7 +3,7 @@ $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'mongoid-likeable'
-  s.version     = '5.0.0.rc1'
+  s.version     = '5.0.0.rc2'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['diowa']
   s.email       = ['dev@diowa.com']
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = 'mongoid-likeable'
 
-  s.add_dependency 'mongoid', '>= 4.0.0.rc1'
+  s.add_dependency 'mongoid', '>= 4.0.0.rc2'
 
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'rake'
