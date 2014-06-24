@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = 'mongoid-likeable'
 
-  s.add_dependency 'mongoid', '>= 5.0.0'
+  s.add_dependency 'mongoid', '>= 4.0.0'
 
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'rake'
