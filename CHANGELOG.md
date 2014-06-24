@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.1
+
+* Fixed Mongoid version number
+
 ## 5.0.0
 
 * Mongoid 4.0.0 support
