@@ -3,7 +3,7 @@ $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'mongoid-likeable'
-  s.version     = '5.0.0'
+  s.version     = '5.0.1'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['diowa']
   s.email       = ['dev@diowa.com']
