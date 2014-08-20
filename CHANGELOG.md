@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.2
+
+* Updated badges
+
 ## 5.0.1
 
 * Fixed Mongoid version number
