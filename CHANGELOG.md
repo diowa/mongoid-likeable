@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.3
+
+* Fixed readme
+
 ## 5.0.2
 
 * Updated badges
