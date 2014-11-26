@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.4
+
+* Strengthened gem dependencies
+
 ## 5.0.3
 
 * Fixed readme
