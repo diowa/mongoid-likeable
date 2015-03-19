@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.0.5
+
+* Test against Ruby 2.2
+* Update dependencies
+
 ## 5.0.4
 
 * Strengthened gem dependencies
