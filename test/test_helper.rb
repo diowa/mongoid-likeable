@@ -6,7 +6,9 @@ if ENV['CI']
 end
 
 require 'simplecov'
-SimpleCov.start 'rails'
+SimpleCov.start do
+  add_filter %w(version.rb)
+end
 
 require 'minitest/autorun'
 require 'database_cleaner'
