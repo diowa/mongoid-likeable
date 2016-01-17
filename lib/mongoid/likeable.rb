@@ -9,7 +9,7 @@ module Mongoid
       field :likes, type: Integer, default: 0
       field :likers, type: Array, default: []
       field :dislikes, type: Integer, default: 0
-      filed :dislikers, type: Array, default: []
+      field :dislikers, type: Array, default: []
     end
 
     def like(liker)
