@@ -1,8 +1,9 @@
 # Changelog
 
-## 5.0.5
+## 6.0.0
 
-* Test against Ruby 2.2
+* Mongoid 5.0 support
+* Test against Ruby 2.2 and 2.3
 * Update dependencies
 
 ## 5.0.4

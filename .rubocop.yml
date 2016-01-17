@@ -1,0 +1,24 @@
+AllCops:
+  Exclude:
+    - 'vendor/bundle/**/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'test/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'test/**/*'
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - 'test/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/SpaceAroundOperators:
+  AllowForAlignment: true

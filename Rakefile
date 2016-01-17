@@ -1,5 +1,11 @@
+require 'bundler/gem_tasks'
+require 'rubocop/rake_task'
+
+RuboCop::RakeTask.new
+
+task default: [:rubocop, :test]
+
 require 'rake/testtask'
-task :default => "test"
 
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
@@ -7,7 +13,7 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-desc "Open an irb session preloaded with this library"
+desc 'Open an irb session preloaded with this library'
 task :console do
-  sh "irb -rubygems -r ./lib/mongoid/likeable.rb"
+  sh 'irb -rubygems -r ./lib/mongoid/likeable.rb'
 end

@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'delorean'
 
-class TestMongoidLikeable < MiniTest::Unit::TestCase
+class TestMongoidLikeable < Minitest::Test
   def setup
     DatabaseCleaner.start
 
@@ -86,12 +86,12 @@ class TestMongoidLikeable < MiniTest::Unit::TestCase
   def test_updates_collection_correctly
     @story.like @simon
     @story.like @emily
-    story = Story.where(:name => 'Mongoid Rocks').first
+    story = Story.where(name: 'Mongoid Rocks').first
     assert_equal 2, story.likes
     assert story.liked? @simon
     assert story.liked? @emily
     story.unlike @simon
-    story = Story.where(:name => 'Mongoid Rocks').first
+    story = Story.where(name: 'Mongoid Rocks').first
     assert_equal 1, story.likes
     refute story.liked? @simon
     assert story.liked? @emily
@@ -129,7 +129,7 @@ class TestMongoidLikeable < MiniTest::Unit::TestCase
       @story_with_timestamps.like @simon
       @story_with_timestamps.like @emily
     end
-    story = StoryWithTimestamps.where(:name => 'Mongoid Rocks').first
+    story = StoryWithTimestamps.where(name: 'Mongoid Rocks').first
     assert_equal 2, story.likes
     assert story.liked? @simon
     assert story.liked? @emily
@@ -138,7 +138,7 @@ class TestMongoidLikeable < MiniTest::Unit::TestCase
     Delorean.time_travel_to(1.month.from_now) do
       story.unlike @simon
     end
-    story = StoryWithTimestamps.where(:name => 'Mongoid Rocks').first
+    story = StoryWithTimestamps.where(name: 'Mongoid Rocks').first
     assert_equal 1, story.likes
     refute story.liked? @simon
     assert story.liked? @emily
