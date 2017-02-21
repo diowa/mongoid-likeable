@@ -20,14 +20,14 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z -- {CHANGELOG.md,LICENSE,README.md,lib}`.split("\x0")
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'mongoid', '~> 5.0'
+  spec.add_dependency 'mongoid', '~> 6.1'
 
-  spec.add_development_dependency 'coveralls', '~> 0.8.10'
+  spec.add_development_dependency 'coveralls', '~> 0.8.19'
   spec.add_development_dependency 'database_cleaner', '~> 1.5'
   spec.add_development_dependency 'delorean', '~> 2.1'
-  spec.add_development_dependency 'm', '~> 1.4'
-  spec.add_development_dependency 'minitest', '~> 5.8'
+  spec.add_development_dependency 'm', '~> 1.5'
+  spec.add_development_dependency 'minitest', '~> 5.10'
   spec.add_development_dependency 'mocha', '~> 1.1'
-  spec.add_development_dependency 'rubocop', '~> 0.36.0'
-  spec.add_development_dependency 'simplecov', '~> 0.11.1'
+  spec.add_development_dependency 'rubocop', '~> 0.47.1'
+  spec.add_development_dependency 'simplecov', '~> 0.12.0'
 end
