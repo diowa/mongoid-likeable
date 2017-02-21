@@ -24,5 +24,4 @@ Dir["#{File.dirname(__FILE__)}/models/*.rb"].each { |f| require f }
 Mongoid.connect_to('mongoid-likeable-test')
 Mongoid.logger = Logger.new $stdout
 
-DatabaseCleaner.orm = 'mongoid'
-DatabaseCleaner.strategy = :truncation
+DatabaseCleaner[:mongoid].strategy = :truncation

@@ -3,7 +3,7 @@ require 'delorean'
 
 class TestMongoidLikeable < Minitest::Test
   def setup
-    DatabaseCleaner.start
+    DatabaseCleaner[:mongoid].start
 
     @simon = User.create name: 'Simon'
     @emily = User.create name: 'Emily'
@@ -12,7 +12,7 @@ class TestMongoidLikeable < Minitest::Test
   end
 
   def teardown
-    DatabaseCleaner.clean
+    DatabaseCleaner[:mongoid].clean
     Delorean.back_to_the_present
   end
 
