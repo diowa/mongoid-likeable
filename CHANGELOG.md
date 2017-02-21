@@ -2,8 +2,8 @@
 
 ## 6.0.0
 
-* Mongoid 5.0 support
-* Test against Ruby 2.2 and 2.3
+* Mongoid 6.0 support
+* Test against Ruby 2.2, 2.3 and 2.4
 * Update dependencies
 
 ## 5.0.4
