@@ -22,9 +22,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'mongoid', '~> 6.1'
 
+  spec.add_development_dependency 'activesupport', '~> 5.0.1'
   spec.add_development_dependency 'coveralls', '~> 0.8.19'
   spec.add_development_dependency 'database_cleaner', '~> 1.5'
-  spec.add_development_dependency 'delorean', '~> 2.1'
   spec.add_development_dependency 'm', '~> 1.5'
   spec.add_development_dependency 'minitest', '~> 5.10'
   spec.add_development_dependency 'mocha', '~> 1.1'

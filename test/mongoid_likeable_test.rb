@@ -1,19 +1,21 @@
 require 'test_helper'
-require 'delorean'
+require 'active_support/testing/time_helpers'
 
 class TestMongoidLikeable < Minitest::Test
+  include ActiveSupport::Testing::TimeHelpers
+
   def setup
     DatabaseCleaner[:mongoid].start
 
     @simon = User.create name: 'Simon'
     @emily = User.create name: 'Emily'
     @story = Story.create name: 'Mongoid Rocks'
-    Delorean.time_travel_to(5.minutes.ago) { @story_with_timestamps = StoryWithTimestamps.create name: 'Mongoid Rocks' }
+    travel_to(5.minutes.ago) { @story_with_timestamps = StoryWithTimestamps.create name: 'Mongoid Rocks' }
   end
 
   def teardown
     DatabaseCleaner[:mongoid].clean
-    Delorean.back_to_the_present
+    travel_back
   end
 
   def test_add_likes_field_to_document
@@ -99,33 +101,33 @@ class TestMongoidLikeable < Minitest::Test
 
   def test_touches_updated_at_when_liking
     updated_at = @story_with_timestamps.updated_at
-    Delorean.time_travel_to(1.month.from_now) { @story_with_timestamps.like @simon }
+    travel_to(1.month.from_now) { @story_with_timestamps.like @simon }
     assert @story_with_timestamps.updated_at > updated_at
   end
 
   def test_does_not_touche_updated_at_when_liking_without_success
     @story_with_timestamps.like @simon
     updated_at = @story_with_timestamps.updated_at
-    Delorean.time_travel_to(1.month.from_now) { @story_with_timestamps.like @simon }
+    travel_to(1.month.from_now) { @story_with_timestamps.like @simon }
     assert @story_with_timestamps.updated_at == updated_at
   end
 
   def test_touches_updated_at_when_unliking
     @story_with_timestamps.like @simon
     updated_at = @story_with_timestamps.updated_at
-    Delorean.time_travel_to(1.month.from_now) { @story_with_timestamps.unlike @simon }
+    travel_to(1.month.from_now) { @story_with_timestamps.unlike @simon }
     assert @story_with_timestamps.updated_at > updated_at
   end
 
   def test_does_not_touche_updated_at_when_unliking_without_success
     updated_at = @story_with_timestamps.updated_at
-    Delorean.time_travel_to(1.month.from_now) { @story_with_timestamps.unlike @simon }
+    travel_to(1.month.from_now) { @story_with_timestamps.unlike @simon }
     assert @story_with_timestamps.updated_at == updated_at
   end
 
   def test_touches_updated_at_and_updates_collection_correctly
     updated_at = @story_with_timestamps.updated_at
-    Delorean.time_travel_to(1.month.from_now) do
+    travel_to(1.month.from_now) do
       @story_with_timestamps.like @simon
       @story_with_timestamps.like @emily
     end
@@ -135,7 +137,7 @@ class TestMongoidLikeable < Minitest::Test
     assert story.liked? @emily
     assert story.updated_at > updated_at
     updated_at = @story_with_timestamps.updated_at
-    Delorean.time_travel_to(1.month.from_now) do
+    travel_to(2.months.from_now) do
       story.unlike @simon
     end
     story = StoryWithTimestamps.where(name: 'Mongoid Rocks').first
