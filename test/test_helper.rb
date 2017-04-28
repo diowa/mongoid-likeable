@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 $LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__))
 
 if ENV['CI']
@@ -7,7 +9,7 @@ end
 
 require 'simplecov'
 SimpleCov.start do
-  add_filter %w(version.rb)
+  add_filter %w[version.rb]
 end
 
 require 'minitest/autorun'
