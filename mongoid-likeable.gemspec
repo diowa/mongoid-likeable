@@ -1,28 +1,34 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
 
-Gem::Specification.new do |s|
-  s.name        = 'mongoid-likeable'
-  s.version     = '5.0.4'
-  s.platform    = Gem::Platform::RUBY
-  s.authors     = ['diowa']
-  s.email       = ['dev@diowa.com']
-  s.homepage    = 'https://github.com/diowa/mongoid-likeable'
-  s.summary     = 'Add likes to your Mongoid documents'
-  s.license     = 'BSD-2-Clause'
-  s.description = s.summary
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'mongoid/likeable/version'
 
-  s.rubyforge_project = 'mongoid-likeable'
+Gem::Specification.new do |spec|
+  spec.name        = 'mongoid-likeable'
+  spec.version     = Mongoid::Likeable::VERSION
+  spec.authors     = ['diowa']
+  spec.email       = ['dev@diowa.com']
 
-  s.add_dependency 'mongoid', '~> 4.0'
+  spec.summary     = 'Add likes to your Mongoid documents'
+  spec.description = spec.summary
+  spec.homepage    = 'https://github.com/diowa/mongoid-likeable'
+  spec.license     = 'BSD-2-Clause'
 
-  s.add_development_dependency 'database_cleaner', '~> 1.3'
-  s.add_development_dependency 'rake', '~> 10.4'
-  s.add_development_dependency 'delorean', '~> 2.1'
-  s.add_development_dependency 'coveralls', '~> 0.7.1'
+  spec.platform    = Gem::Platform::RUBY
+  spec.rubyforge_project = 'mongoid-likeable'
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ['lib']
+  spec.files         = `git ls-files -z -- {CHANGELOG.md,LICENSE,README.md,lib}`.split("\x0")
+  spec.require_paths = ['lib']
+
+  spec.add_dependency 'mongoid', '~> 6.1'
+
+  spec.add_development_dependency 'activesupport', '~> 5.0', '< 5.2'
+  spec.add_development_dependency 'coveralls', '~> 0.8.21'
+  spec.add_development_dependency 'database_cleaner', '~> 1.5'
+  spec.add_development_dependency 'm', '~> 1.5'
+  spec.add_development_dependency 'minitest', '~> 5.10'
+  spec.add_development_dependency 'mocha', '~> 1.1'
+  spec.add_development_dependency 'rubocop', '~> 0.48.1'
+  spec.add_development_dependency 'simplecov', '~> 0.14.1'
 end

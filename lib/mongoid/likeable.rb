@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'mongoid'
 
 module Mongoid
   module Likeable
-
     extend ActiveSupport::Concern
 
     included do
@@ -30,6 +31,7 @@ module Mongoid
     end
 
     private
+
     def liker_id(liker)
       if liker.respond_to?(:_id)
         liker._id

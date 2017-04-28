@@ -1,5 +1,11 @@
 # Changelog
 
+## 6.0.0
+
+* Mongoid 6.1 support
+* Test against Ruby 2.2, 2.3 and 2.4
+* Update dependencies
+
 ## 5.0.4
 
 * Strengthened gem dependencies

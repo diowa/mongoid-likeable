@@ -32,14 +32,6 @@ Take a look at [git-flow, A successful Git branching model](http://nvie.com/post
 
 
 
-## Coding standards
-
-### Ruby
-
-- [Ruby Styleguide](https://github.com/styleguide/ruby)
-
-
-
 ## License
 
 By contributing your code, you agree to license your contribution under the terms of the [BSD 2-Clause License](LICENSE)
