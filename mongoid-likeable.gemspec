@@ -1,4 +1,3 @@
-# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'mongoid/likeable/version'
@@ -22,12 +21,12 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'mongoid', '~> 6.1'
 
-  spec.add_development_dependency 'activesupport', '~> 5.0.1'
-  spec.add_development_dependency 'coveralls', '~> 0.8.19'
+  spec.add_development_dependency 'activesupport', '~> 5.0', '< 5.2'
+  spec.add_development_dependency 'coveralls', '~> 0.8.21'
   spec.add_development_dependency 'database_cleaner', '~> 1.5'
   spec.add_development_dependency 'm', '~> 1.5'
   spec.add_development_dependency 'minitest', '~> 5.10'
   spec.add_development_dependency 'mocha', '~> 1.1'
-  spec.add_development_dependency 'rubocop', '~> 0.47.1'
-  spec.add_development_dependency 'simplecov', '~> 0.12.0'
+  spec.add_development_dependency 'rubocop', '~> 0.48.1'
+  spec.add_development_dependency 'simplecov', '~> 0.14.1'
 end
