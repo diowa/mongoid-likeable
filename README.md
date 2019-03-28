@@ -1,7 +1,6 @@
 # mongoid-likeable
 [![Gem Version](https://badge.fury.io/rb/mongoid-likeable.svg)](http://badge.fury.io/rb/mongoid-likeable)
 [![Build Status](https://secure.travis-ci.org/diowa/mongoid-likeable.svg?branch=master)](https://travis-ci.org/diowa/mongoid-likeable)
-[![Dependency Status](https://gemnasium.com/diowa/mongoid-likeable.svg)](https://gemnasium.com/diowa/mongoid-likeable)
 [![Code Climate](https://codeclimate.com/github/diowa/mongoid-likeable/badges/gpa.svg)](https://codeclimate.com/github/diowa/mongoid-likeable)
 [![Coverage Status](https://img.shields.io/coveralls/diowa/mongoid-likeable.svg?branch=master)](https://coveralls.io/r/diowa/mongoid-likeable)
 
@@ -110,6 +109,6 @@ For more information on SemVer, please visit [http://semver.org/](http://semver.
 
 ## Copyright and license
 
-Copyright 2014 diowa under [the BSD 2-Clause license](LICENSE).
+Copyright 2019 diowa under [the BSD 2-Clause license](LICENSE).
 
 mongoid-voteable is licensed under the MIT License - Copyright (c) 2012 Tom Bell
