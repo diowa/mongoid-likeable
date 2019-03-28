@@ -24,11 +24,11 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'mongoid', '~> 7.0'
 
   spec.add_development_dependency 'activesupport', '~> 5.0', '< 5.2'
-  spec.add_development_dependency 'coveralls', '~> 0.8.21'
-  spec.add_development_dependency 'database_cleaner', '~> 1.5'
+  spec.add_development_dependency 'coveralls_reborn', '~> 0.12.0'
+  spec.add_development_dependency 'database_cleaner', '~> 1.7'
   spec.add_development_dependency 'm', '~> 1.5'
-  spec.add_development_dependency 'minitest', '~> 5.10'
-  spec.add_development_dependency 'mocha', '~> 1.1'
-  spec.add_development_dependency 'rubocop', '~> 0.48.1'
-  spec.add_development_dependency 'simplecov', '~> 0.14.1'
+  spec.add_development_dependency 'minitest', '~> 5.11'
+  spec.add_development_dependency 'mocha', '~> 1.8'
+  spec.add_development_dependency 'rubocop', '~> 0.66.0'
+  spec.add_development_dependency 'simplecov', '~> 0.16.1'
 end
