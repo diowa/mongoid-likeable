@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z -- {CHANGELOG.md,LICENSE,README.md,lib}`.split("\x0")
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'mongoid', '~> 6.1'
+  spec.add_dependency 'mongoid', '~> 7.0'
 
   spec.add_development_dependency 'activesupport', '~> 5.0', '< 5.2'
   spec.add_development_dependency 'coveralls', '~> 0.8.21'
