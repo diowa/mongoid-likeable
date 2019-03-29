@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'mongoid', '>= 6.0', '< 8'
 
-  spec.add_development_dependency 'activesupport', '~> 5.0', '< 5.2'
+  spec.add_development_dependency 'activesupport', '~> 5.0', '< 6'
   spec.add_development_dependency 'appraisal', '~> 2.2'
   spec.add_development_dependency 'coveralls_reborn', '~> 0.12.0'
   spec.add_development_dependency 'database_cleaner', '~> 1.7'

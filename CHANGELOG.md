@@ -1,5 +1,11 @@
 # Changelog
 
+## 6.1.0
+
+* Add Mongoid 7 support
+* Test against latest Ruby versions
+* Update dependencies
+
 ## 6.0.0
 
 * Mongoid 6.1 support
